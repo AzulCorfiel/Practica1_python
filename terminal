@@ -1,0 +1,4 @@
+cd c:\Users\azulc\Desktop\python1
+git init
+git add .
+git commit -m "Initial commit"
