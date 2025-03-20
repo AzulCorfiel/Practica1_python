@@ -1,4 +1,11 @@
 cd c:\Users\azulc\Desktop\python1
 git init
+git checkout -b nueva-rama
 git add .
-git commit -m "Initial commit"
+git commit -m "Descripción de los cambios"
+git add .
+git commit -m "Descripción de los cambios adicionales"
+git push -u origin nueva-rama
+git add .
+git commit -m "Otro conjunto de cambios"
+git push
