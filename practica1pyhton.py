@@ -23,14 +23,20 @@ answers = [
 # Índice de la respuesta correcta para cada pregunta, el el mismo orden que las preguntas
 correct_answers_index = [1, 2, 0, 3, 1]
 # El usuario deberá contestar 3 preguntas
+#unimos las 3 listas en una sola estructura de datos 
+question_data = list(zip(questions, answers, correct_answers_index))
+
+#seleccionamos 3 preguntas aleatorias
+question_to_ask = random.choice(question_data,	k=3)
+
 puntaje = 0
-for _ in range(3):
-# Se selecciona una pregunta aleatoria
-    question_index = random.randint(0, len(questions) - 1)
-# Se muestra la pregunta y las respuestas posibles
-    print(questions[question_index])
-    for i, answer in enumerate(answers[question_index]):
-        print(f"{i + 1}. {answer}")
+
+# Preguntas al usuario
+for questions, options, correct_index in question_to_ask:
+    print(questions)  # Muestra la pregunta  Itera sobre las opciones y las muestra numeradas
+    
+    for i, option in enumerate(options):
+        print(f"{i + 1}. {option}")
 # El usuario tiene 2 intentos para responder correctamente
     for intento in range(2):
         print()
@@ -48,7 +54,7 @@ for _ in range(3):
             sys.exit(1)
 
          # Se verifica si la respuesta es correcta
-        if user_answer == correct_answers_index[question_index]:
+        if user_answer == correct_index:
             print("¡Correcto! (+1 punto)")
             puntaje += 1
             print()
@@ -58,8 +64,7 @@ for _ in range(3):
             if intento < 1: #aun queda un intento
                 print("Incorrecto.	Tienes otra oportunidad.		(-0.5	puntos)")
             else:   #ya no quedan intentos
-                print("Incorrecto. La respuesta correcta es:")
-                print(answers[question_index][correct_answers_index[question_index]])
+                print(f"Incorrecto. La respuesta correcta era: {options[correct_index]}")  
     print()
 print(f"Puntaje total: {puntaje}")
 
