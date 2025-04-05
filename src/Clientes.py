@@ -5,7 +5,7 @@ def limpiar_clientes(clientes):
     """
     
     #Eliminar valores nulos y vacíos
-    clientes_limpios = [cliente.strip() for cliente in clientes if cliente and cliente.strip()]
+    clientes_limpios = [cliente.strip() for cliente in clientes if cliente and cliente.strip()]#limpia clientes,novacio,
 
     #Convertir a formato título manualmente 
     def formato_titulo(nombre):
@@ -18,7 +18,7 @@ def limpiar_clientes(clientes):
                 resultado.append("")
         return " ".join(resultado)
     
-    clientes_limpios = [formato_titulo(cliente) for cliente in clientes_limpios]
+    clientes_limpios = [formato_titulo(cliente) for cliente in clientes_limpios]#list compr,recorre y aplica formato
     #Eliminar duplicados
     clientes_unicos = [] #lista para guardar sin duplicados
     vistos = set() #conjunto set para guardar los nombres vistos

@@ -4,4 +4,4 @@ def son_anagramas(palabra1, palabra2):
     palabra2 = palabra2.lower().replace(" ", "")
     
     # Comparamos las letras de ambas palabras
-    return sorted(palabra1) == sorted(palabra2)
+    return sorted(palabra1) == sorted(palabra2)#ordenado las letras de ambas palabras y las compara
