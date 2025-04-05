@@ -16,8 +16,7 @@ pip install -r requirements.txt
 
 Ingresá a la carpeta `notebooks` y elegí el archivo que corresponda:
 
-- **Practica2.ipynb** → ejercicios **1 a 9**
-- **Ejercicio10.ipynb** → ejercicio **10**
+- **ejer(numero de ejercicio).ipynb**
 
 Podés abrir los archivos desde **Visual Studio Code** haciendo clic en ellos dentro del panel lateral izquierdo, debajo de la sección **EXPLORER**.
 
